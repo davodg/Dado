@@ -1,2 +1,2 @@
 # Dado
-Jogo de dado simples
+Jogo de dado simples feito em python
