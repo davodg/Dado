@@ -8,23 +8,21 @@ def dado():
 
 
 def jogar():
-    c = 'sim'
 
-    while c == 'sim':
+    resposta = int(input('Olá, você gostaria de jogar o dado?\n1.Sim\n2.Não\n '))
+    if resposta == 1:
+        resultado = dado()
+        print(resultado)
+    elif resposta == 2:
+        print('Compreensível, tenha um ótimo dia!')
+        exit()
 
-        try:
-            resposta = input('Olá, você gostaria de jogar o dado? ')
-        except TypeError:
-            print("Desculpe, você digitou algo errado, tente de novo")
-        if resposta == 'sim':
-            resultado = dado()
-            print(resultado)
-        elif resposta == 'não':
-            print('Compreensível, tenha um ótimo dia!')
+    repeat = int(input('Deseja jogar de novo?\n1.Sim\n2.Não\n'))
 
-    c = input('Você deseja jogar de novo? ')
+    if repeat == 1:
+        jogar()
+    else:
+        print('Obrigado por jogar!!')
 
 
 jogar()
-
-
